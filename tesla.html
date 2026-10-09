@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="nl">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tesla koppelen</title>
+<body style="font-family:system-ui,sans-serif;max-width:32rem;margin:3rem auto;padding:0 1rem;background:#1c1c1b;color:#f1efe8">
+<h1 id="h" style="font-size:1.4rem">Tesla koppelen</h1>
+<p id="m">Bezig…</p>
+<script>
+  var q = new URLSearchParams(location.search);
+  var ok = q.get('ok') === '1';
+  document.getElementById('h').textContent = ok ? 'Tesla gekoppeld' : 'Koppelen mislukt';
+  document.getElementById('h').style.color = ok ? '#97C459' : '#F09595';
+  document.getElementById('m').textContent = q.get('m') || '';
+</script>
+</body>
+</html>
